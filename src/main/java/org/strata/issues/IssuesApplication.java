@@ -16,9 +16,11 @@ public class IssuesApplication implements CommandLineRunner {
 
 		final var money = Money.of(currency, 123.456789);
 		System.out.println("Money.value=" + money.getValue());
+		System.out.println("Money.plus.value=" + money.plus(Money.of(currency, 23.456789)).getValue());
 
 		final var bigMoney = BigMoney.of(currency, 123.456789);
 		System.out.println("BigMoney.value=" + bigMoney.getValue());
+		System.out.println("BigMoney.plus.value=" + bigMoney.plus(BigMoney.of(currency, 23.456789)).getValue());
 	}
 
 	public static void main(String[] args) {
